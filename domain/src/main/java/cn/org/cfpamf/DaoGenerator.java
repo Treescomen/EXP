@@ -34,7 +34,7 @@ public class DaoGenerator {
         String path = f.getAbsolutePath();
         System.out.println(path);
         //程序包名
-        final String str = "Zhnx";
+        final String str = "EXP";
 
         int i = path.indexOf(str);
 
