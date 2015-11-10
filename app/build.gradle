@@ -19,16 +19,16 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file( "zhnxKeyStore.KeyStore")
-            storePassword "zhonghenongxin"
-            keyAlias "zhnx"
-            keyPassword "zhonghenongxin"
+            storeFile file( "key.jks")
+            storePassword "applicationkey"
+            keyAlias "zzy"
+            keyPassword "applicaiton"
         }
         release {
-            storeFile file( "zhnxKeyStore.KeyStore")
-            storePassword "zhonghenongxin"
-            keyAlias "zhnx"
-            keyPassword "zhonghenongxin"
+            storeFile file( "key.jks")
+            storePassword "applicationkey"
+            keyAlias "zzy"
+            keyPassword "applicaiton"
         }
     }
     compileOptions {
