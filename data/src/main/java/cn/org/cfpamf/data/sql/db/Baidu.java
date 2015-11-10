@@ -6,19 +6,14 @@ package cn.org.cfpamf.data.sql.db;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 // KEEP INCLUDES END
-
-
 /**
  * Entity mapped to table "BAIDU".
  */
 public class Baidu implements Parcelable {
 
     private String id;
-    /**
-     * Not-null value.
-     */
+    /** Not-null value. */
     private String response;
 
     // KEEP FIELDS - put your custom fields here
@@ -44,20 +39,15 @@ public class Baidu implements Parcelable {
         this.id = id;
     }
 
-    /**
-     * Not-null value.
-     */
+    /** Not-null value. */
     public String getResponse() {
         return response;
     }
 
-    /**
-     * Not-null value; ensure this value is available before it is saved to the database.
-     */
+    /** Not-null value; ensure this value is available before it is saved to the database. */
     public void setResponse(String response) {
         this.response = response;
     }
-
 
     // KEEP METHODS - put your custom methods here
     //下次不会被覆盖

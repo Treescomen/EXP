@@ -7,11 +7,14 @@ import de.greenrobot.daogenerator.Schema;
 
 public class DaoGenerator {
 
+    public static final String SQL_DB="cn.org.cfpamf.data.sql.db";
+    public static final String SQL_DAO="cn.org.cfpamf.data.sql.dao";
+
     public static void main(String args[]) throws Exception {
-        Schema schema = new Schema(1, "cn.org.cfpamf.data.sql.db");
-        schema.setDefaultJavaPackageDao("cn.org.cfpamf.data.sql.dao");
+        Schema schema = new Schema(1, SQL_DB);
+        schema.setDefaultJavaPackageDao(SQL_DAO);
         createTableBaidu(schema);
-        new de.greenrobot.daogenerator.DaoGenerator().generateAll(schema, getPath() + "\\data\\src\\main\\java");
+        new de.greenrobot.daogenerator.DaoGenerator().generateAll(schema, getPath());
     }
 
     private static void createTableBaidu(Schema schema) {
@@ -29,16 +32,16 @@ public class DaoGenerator {
      */
     private static String getPath() {
 
-        File f = new File(new DaoGenerator().getClass().getResource("/").getPath());
-
-        String path = f.getAbsolutePath();
-        System.out.println(path);
-        //程序包名
-        final String str = "EXP";
-
-        int i = path.indexOf(str);
-
-        return path.substring(0, i + str.length());
+        String path=new StringBuilder()
+                .append("data")
+                .append(File.separator)
+                .append("src")
+                .append(File.separator)
+                .append("main")
+                .append(File.separator)
+                .append("java")
+                .append(File.separator).toString();
+        return new File(path).getAbsolutePath();
     }
 
 }
