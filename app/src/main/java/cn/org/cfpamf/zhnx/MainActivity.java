@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity {
     }
 
     /**
-     * 处理失败信息
+     * 处理成功信息
      * @param baidu
      */
     public void onEventMainThread(Baidu baidu) {
